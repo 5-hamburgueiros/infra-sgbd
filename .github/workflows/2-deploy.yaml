@@ -8,9 +8,7 @@ on:
 jobs:
   terraform_deploy:
     name: Deploy Terraform
-    if: success('Validate Terraform Configuration')
     runs-on: ubuntu-latest
-    needs: terraform_validate
 
     steps:
     - name: Checkout repository
