@@ -1,8 +1,7 @@
 name: Deploy Terraform for RDS
 
 on:
-  pull_request:
-    types: [push]
+  push:
     branches:
       - main
 
