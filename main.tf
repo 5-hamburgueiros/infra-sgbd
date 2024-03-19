@@ -1,5 +1,13 @@
 provider "aws" {
-  region  = "us-east-2"
+  region  = "us-east-1"
+}
+
+terraform {
+  backend "s3" {
+    bucket = "state-terraform-fiap-grupo-52"
+    key    = "infra-sgbd"
+    region = "us-east-1"
+  }
 }
 
 resource "aws_default_vpc" "default_vpc" {}
